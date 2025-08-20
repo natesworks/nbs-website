@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project Laser</title>
+        <base href="game/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="load-indicator"></div> 
+            <script>
+            var a=setTimeout,b=document.querySelector(".load-indicator"),c=0;
+            function d(){
+                b&&(b.innerText="┤┘┴└├┌┬┐".substr(c++%8,1),a(d,60))
+            }
+            a(d,500);
+            </script>
+            <div class="rotate-screen">
+                <div class="rotate-icon">
+                    <img src="assets/css/rotate.png">
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
